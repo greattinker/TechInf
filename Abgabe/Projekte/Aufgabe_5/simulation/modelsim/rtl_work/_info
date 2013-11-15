@@ -1,0 +1,159 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_5/simulation/modelsim
+Edecoder
+Z1 w1383926480
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z4 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 d/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_5/simulation/modelsim
+Z8 8/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_5/src/Decoder.vhdl
+Z9 F/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_5/src/Decoder.vhdl
+l0
+L7
+VRf90==528gzgi?1XQ`a9;1
+Z10 OV;C;10.1d;51
+31
+Z11 !s108 1383928148.522789
+Z12 !s90 -reportprogress|300|-93|-work|work|/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_5/src/Decoder.vhdl|
+Z13 !s107 /home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_5/src/Decoder.vhdl|
+Z14 o-93 -work work -O0
+Z15 tExplicit 1
+!s100 b=VHMBS1l>0OVW20dkQDb0
+!i10b 1
+Adecoder1
+R2
+R3
+R4
+R5
+R6
+DEx4 work 7 decoder 0 22 Rf90==528gzgi?1XQ`a9;1
+l19
+L15
+V3Q<m>LjXUUScC]l31?L5J3
+R10
+31
+R11
+R12
+R13
+R14
+R15
+!s100 V[`OLGXmlkQk8:gkgV[2M3
+!i10b 1
+Ehallo
+Z16 w1383927455
+R2
+R3
+R4
+R5
+R6
+R7
+Z17 8/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_5/src/hallo.vhdl
+Z18 F/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_5/src/hallo.vhdl
+l0
+L6
+VPT;[COWFkdmZDj0TBCc_63
+R10
+31
+Z19 !s108 1383928148.577589
+Z20 !s90 -reportprogress|300|-93|-work|work|/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_5/src/hallo.vhdl|
+Z21 !s107 /home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_5/src/hallo.vhdl|
+R14
+R15
+!s100 S]^GEQLHDLB8JPFMjW8mM1
+!i10b 1
+Ahello
+R2
+R3
+R4
+R5
+R6
+DEx4 work 5 hallo 0 22 PT;[COWFkdmZDj0TBCc_63
+l42
+L18
+Vl2Y^Ud@KemHefnUZdz4>E0
+R10
+31
+R19
+R20
+R21
+R14
+R15
+!s100 idb[C9`n:3mz^XmoL4LIa1
+!i10b 1
+Emultiplex
+Z22 w1383928135
+R2
+R5
+R6
+R7
+Z23 8/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_5/src/Multiplex.vhdl
+Z24 F/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_5/src/Multiplex.vhdl
+l0
+L28
+V2Lb=O[@R]FeYO;MJY19gg1
+R10
+31
+Z25 !s108 1383928148.474573
+Z26 !s90 -reportprogress|300|-93|-work|work|/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_5/src/Multiplex.vhdl|
+Z27 !s107 /home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_5/src/Multiplex.vhdl|
+R14
+R15
+!s100 inSZlRhn1W^?4VYd6JAZ@3
+!i10b 1
+Amulti
+R2
+R5
+R6
+DEx4 work 9 multiplex 0 22 2Lb=O[@R]FeYO;MJY19gg1
+l50
+L44
+Vm44<?7C79f7bV<=f]f9J60
+R10
+31
+R25
+R26
+R27
+R14
+R15
+!s100 KnemP0UaiN`GDaA<KF4;d0
+!i10b 1
+Emultiplexer_tb
+Z28 w1383927584
+R5
+R6
+R7
+Z29 8/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_5/src/multiplexer_tb.vhdl
+Z30 F/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_5/src/multiplexer_tb.vhdl
+l0
+L6
+VkR>z]I:>ck]kTGf]SAefW3
+!s100 eLgalY00VY@j3?ZcbMDmB1
+R10
+31
+!i10b 1
+Z31 !s108 1383928148.634549
+Z32 !s90 -reportprogress|300|-93|-work|work|/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_5/src/multiplexer_tb.vhdl|
+Z33 !s107 /home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_5/src/multiplexer_tb.vhdl|
+R14
+R15
+Abehavioral
+R5
+R6
+DEx4 work 14 multiplexer_tb 0 22 kR>z]I:>ck]kTGf]SAefW3
+l39
+L12
+V>XCm568Daa6=i7ZhJD@9L2
+!s100 CHM<R[?8TAe7B8X5C?Q=W2
+R10
+31
+!i10b 1
+R31
+R32
+R33
+R14
+R15

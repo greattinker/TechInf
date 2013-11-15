@@ -1,0 +1,128 @@
+|EntprellteLED
+clk => EntprellAutomat:prell.clk
+clk => LEDAutomat:led1.clk
+btn_e => EntprellAutomat:prell.btn
+ld_e <= LEDAutomat:led1.ld
+
+
+|EntprellteLED|EntprellAutomat:prell
+clk => Zaehler:timer.clk
+clk => timer_on.CLK
+clk => z_neu.CLK
+clk => btnout~reg0.CLK
+clk => z_alt.CLK
+clk => btn_s.CLK
+clk => btn2.CLK
+btn => btn2.DATAIN
+btnout <= btnout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EntprellteLED|EntprellAutomat:prell|Zaehler:timer
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+clk => counter[8].CLK
+clk => counter[9].CLK
+clk => counter[10].CLK
+clk => counter[11].CLK
+clk => counter[12].CLK
+clk => counter[13].CLK
+clk => counter[14].CLK
+clk => counter[15].CLK
+clk => counter[16].CLK
+clk => counter[17].CLK
+clk => counter[18].CLK
+clk => counter[19].CLK
+clk => counter[20].CLK
+clk => counter[21].CLK
+clk => counter[22].CLK
+clk => counter[23].CLK
+clk => counter[24].CLK
+clk => counter[25].CLK
+clk => counter[26].CLK
+clk => counter[27].CLK
+clk => counter[28].CLK
+clk => counter[29].CLK
+clk => counter[30].CLK
+clk => counter[31].CLK
+clk => peak.CLK
+zaehler_time[0] => Add0.IN64
+zaehler_time[1] => Add0.IN63
+zaehler_time[2] => Add0.IN62
+zaehler_time[3] => Add0.IN61
+zaehler_time[4] => Add0.IN60
+zaehler_time[5] => Add0.IN59
+zaehler_time[6] => Add0.IN58
+zaehler_time[7] => Add0.IN57
+zaehler_time[8] => Add0.IN56
+zaehler_time[9] => Add0.IN55
+zaehler_time[10] => Add0.IN54
+zaehler_time[11] => Add0.IN53
+zaehler_time[12] => Add0.IN52
+zaehler_time[13] => Add0.IN51
+zaehler_time[14] => Add0.IN50
+zaehler_time[15] => Add0.IN49
+zaehler_time[16] => Add0.IN48
+zaehler_time[17] => Add0.IN47
+zaehler_time[18] => Add0.IN46
+zaehler_time[19] => Add0.IN45
+zaehler_time[20] => Add0.IN44
+zaehler_time[21] => Add0.IN43
+zaehler_time[22] => Add0.IN42
+zaehler_time[23] => Add0.IN41
+zaehler_time[24] => Add0.IN40
+zaehler_time[25] => Add0.IN39
+zaehler_time[26] => Add0.IN38
+zaehler_time[27] => Add0.IN37
+zaehler_time[28] => Add0.IN36
+zaehler_time[29] => Add0.IN35
+zaehler_time[30] => Add0.IN34
+zaehler_time[31] => Add0.IN33
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => counter.OUTPUTSELECT
+zaehler_on => peak.OUTPUTSELECT
+peak_out <= peak.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EntprellteLED|LEDAutomat:led1
+clk => led.CLK
+clk => ld~reg0.CLK
+btn => led.ENA
+ld <= ld~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

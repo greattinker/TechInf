@@ -1,0 +1,23 @@
+Quartus II Archive log --	/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_1/Aufgabe_1_tmp_archive.qarlog
+
+Archive:	/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_1/Aufgabe_1_tmp_archive.qar
+Date:		Fri Oct 25 16:35:21 2013
+Quartus II 64-Bit		13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+	=========== Files Selected: ===========
+/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_1/Aufgabe_1.qpf
+/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_1/Example.qsf
+/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_1/Example.sdc
+/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_1/assignment_defaults.qdf
+/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_1/incremental_db/compiled_partitions/Example.db_info
+/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_1/src/Decoder.vhdl
+	======= Total: 6 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Fri Oct 25 16:35:23 2013
+Source archive file:	/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_1/Aufgabe_1_tmp_archive.qar
+Archive was extracted into	/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_2/
+		 - successfully.

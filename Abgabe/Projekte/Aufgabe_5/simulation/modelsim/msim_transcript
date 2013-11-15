@@ -1,0 +1,309 @@
+# do Example_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /opt/altera/13.0/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/altera/13.0/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_5/src/Multiplex.vhdl}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Multiplex
+# -- Compiling architecture multi of Multiplex
+# vcom -93 -work work {/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_5/src/Decoder.vhdl}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Decoder
+# -- Compiling architecture decoder1 of Decoder
+# vcom -93 -work work {/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_5/src/hallo.vhdl}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Hallo
+# -- Compiling architecture hello of hallo
+# 
+# vcom -93 -work work {/home_sdb/home_prak/basic_ti/Dokumente/Aufgabe_5/src/multiplexer_tb.vhdl}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Multiplexer_tb
+# -- Compiling architecture behavioral of Multiplexer_tb
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  multiplexer_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps multiplexer_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.multiplexer_tb(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.hallo(hello)
+# Loading work.multiplex(multi)
+# Loading work.decoder(decoder1)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 124150 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 248310 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 372470 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 496630 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 620790 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 744950 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 869110 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 993270 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1117430 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1241590 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1365750 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1489910 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1614070 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1738230 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1862390 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1986550 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2110710 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2234870 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2359030 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2483190 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2607350 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2731510 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2855670 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2979830 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3103990 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3228150 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3352310 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3476470 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3600630 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3724790 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3848950 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3973110 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4097270 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4221430 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4345590 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4469750 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4593910 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4718070 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4842230 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4966390 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5090550 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5214710 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5338870 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5463030 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5587190 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5711350 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5835510 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5959670 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6083830 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6207990 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6332150 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6456310 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6580470 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6704630 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6828790 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6952950 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7077110 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7201270 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7325430 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7449590 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7573750 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7697910 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7822070 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7946230 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 8070390 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 8194550 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 8318710 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 8442870 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 8567030 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 8691190 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 8815350 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 8939510 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 9063670 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 9187830 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 9311990 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 9436150 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 9560310 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 9684470 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 9808630 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 9932790 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 10056950 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 10181110 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 10305270 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 10429430 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 10553590 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 10677750 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 10801910 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 10926070 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 11050230 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 11174390 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 11298550 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 11422710 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 11546870 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 11671030 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 11795190 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 11919350 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 12043510 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 12167670 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 12291830 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 12415990 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 12540150 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 12664310 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 12788470 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 12912630 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 13036790 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 13160950 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 13285110 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 13409270 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 13533430 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 13657590 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 13781750 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 13905910 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 14030070 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 14154230 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 14278390 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 14402550 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 14526710 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 14650870 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 14775030 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 14899190 ns  Iteration: 0  Instance: /multiplexer_tb/UUT/mult
+# Break key hit 
+# Simulation stop requested.

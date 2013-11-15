@@ -1,0 +1,82 @@
+--
+-- Copyright (c) 20013
+-- Technische Universitaet Dresden, Dresden, Germany
+-- Faculty of Computer Science
+-- Institute for Computer Engineering
+-- Chair for VLSI-Design, Diagnostics and Architecture
+-- 
+-- For internal educational use only.
+-- The distribution of source code or generated files
+-- is prohibited.
+--
+
+--
+-- Entity: Example
+-- Author(s): Martin Zabel, Matthias Haesing
+-- 
+-- Simple example for the Terasic DE0 board.
+--
+-- Revision:    $Revision: 1.1 $
+-- Last change: $Date: 2013-10-09 12:49:38 $
+--
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+
+entity Entprellung is
+  
+  port (
+		clk : in std_logic;
+		btn : in std_logic;
+		btnout  : out  std_logic
+		);
+		
+end Entprellung;
+
+architecture prell of Entprellung is 
+	
+	type zustaende is (idle, count);  -- 2 Zustände, idle = button betätigen möglich, count = 3ms warten (bis 150.000 hochzählen bei 50Mhz)
+	attribute enum_encoding : string;
+	attribute enum_encoding of zustaende : type is "1 0";
+	signal z_alt, z_neu : zustaende := idle;
+	signal btn2, btn_s, output : std_logic := '0';
+	signal counter : unsigned(17 downto 0) := (others => '0');
+
+begin
+
+	process (clk)
+	begin  -- process
+		if rising_edge(clk) then
+			btn2 <= btn;
+			btn_s <= not btn2;
+		end if;
+	end process;
+
+	process(clk)
+	begin
+		if rising_edge(clk) then -- neuen Zustand übernehmen + counter hochzählen falls in count
+			z_alt <= z_neu;
+			btnout <= output;
+			if(z_neu = count) then
+				if(z_alt = idle) then
+					counter <= (others => '0');
+				end if;
+				counter <= counter + 1;
+			end if;
+		end if;
+	end process;
+
+	process(btn_s) -- neuen Zustand + Ausgabe berechnen
+	begin
+		case z_alt is
+			when idle 	=> z_neu <= count;
+								output <= btn;
+			when count 	=> if counter = "100100100111110000" then
+									z_neu <= idle;
+								end if;
+		end case;
+	end process;
+	
+end prell;

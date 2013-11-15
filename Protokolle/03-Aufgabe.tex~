@@ -1,0 +1,21 @@
+<<<<<<< HEAD
+\section{Aufgabe 3 - Modulo-n-Zähler}
+\subsection{Entwurf}
+\begin{description}
+\item[a)] Der Zähler ist nach 50 Millionen Schritten zurückzusetzen (50MHz Takt entspricht 50 Millionen Taktperioden pro Sekunde)
+\item[b)] Für das Schieberegister ist der Zählerzustand ein Enable-Signal
+\item[c)] 
+	\begin{description}
+	\item[Input] 
+		\begin{itemize}
+			\item 50MHz Takt
+			\item Reset (Schiebeschalter SW0)
+		\end{itemize}
+	\item[Output] LED-Zeile
+	\item[Ansatz] 2 Komponenten Schieber und Zähler 
+	\end{description}	
+\end{description}
+=======
+\section{Aufgabe 1 - Binär-Dekoder}
+\subsection{Entwurf}
+>>>>>>> 02b58445d6fbf89a0a104f3d731f418e42c7ba43

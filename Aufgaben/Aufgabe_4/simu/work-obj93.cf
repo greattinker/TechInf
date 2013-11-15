@@ -1,0 +1,13 @@
+v 3
+file "/media/Daten/Studium/5-Semester/Einführung in die Technische Informatik/VLSI/Praktikum/Aufgaben/Aufgabe_4/" "src/Zaehler.vhdl" "20131108111958.000" "20131108125401.442":
+  entity zaehler at 2( 1) + 0 on 17;
+  architecture zae1 of zaehler at 18( 282) + 0 on 18;
+file "/media/Daten/Studium/5-Semester/Einführung in die Technische Informatik/VLSI/Praktikum/Aufgaben/Aufgabe_4/" "src/LED.vhdl" "20131108113304.000" "20131108125401.205":
+  entity led at 2( 1) + 0 on 13;
+  architecture led1 of led at 16( 209) + 0 on 14;
+file "/media/Daten/Studium/5-Semester/Einführung in die Technische Informatik/VLSI/Praktikum/Aufgaben/Aufgabe_4/" "src/Entprellung.vhdl" "20131108114810.000" "20131108125401.321":
+  entity entprellung at 2( 1) + 0 on 15;
+  architecture entprel1 of entprellung at 18( 239) + 0 on 16;
+file "/media/Daten/Studium/5-Semester/Einführung in die Technische Informatik/VLSI/Praktikum/Aufgaben/Aufgabe_4/" "testbench/LED_tb.vhdl" "20131108115120.000" "20131108125401.101":
+  entity led_tb at 1( 0) + 0 on 11;
+  architecture behavioral of led_tb at 12( 237) + 0 on 12;

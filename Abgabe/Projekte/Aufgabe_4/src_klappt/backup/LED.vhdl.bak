@@ -1,0 +1,33 @@
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity LED is 
+
+	port ( 
+		clk : in std_logic;
+		btn : in std_logic;
+		ld : out std_logic
+		);
+end LED;
+
+architecture led1 of LED is 
+
+	type zustand is (an, aus);
+	attribute enum_encoding : string;
+	attribute enum_encoding of zustaende : type is "0 1"; --low-aktiv
+	signal z_alt, z_neu : zustand;
+	
+	process (clk)
+	begin
+		if rising_edge(clk) then
+			z_alt <= z_neu;
+		end if;
+	end process;
+	
+	process(btn)
+	begin
+		z_neu <= btn;
+	end process;
+

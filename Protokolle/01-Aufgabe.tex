@@ -1,0 +1,38 @@
+\section{Aufgabe 1 - Binär-Dekoder}
+\subsection{Entwurf}
+\begin{description}
+	\item[Input] 4-Bit Binärzahl durch Schieberegister SW3 ... SW0
+	\item[Output] 7-Segmente Darstellung einer Hexadezimalziffer (8 Einzelsignale = 7 Segmente + 1 Punkt)
+\end{description}
+
+\begin{tabular}{|c|c|c|c||c|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{Input} & \multicolumn{9}{|c|}{Output} \\
+\hline
+\textsc{SW3} & \textsc{SW2} & \textsc{SW1} & \textsc{SW0} & 
+\textsc{Hex} & \textsc{A} & \textsc{B} & \textsc{C} & \textsc{D} & \textsc{E} & \textsc{F} & \textsc{G} & \textsc{dot} \\ 
+\hline
+\hline
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 \\ 
+0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 1 & 1 & 1 & 1 & 1 \\
+0 & 0 & 1 & 0 & 2 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 1 \\
+0 & 0 & 1 & 1 & 3 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 1 \\
+0 & 1 & 0 & 0 & 4 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 \\
+0 & 1 & 0 & 1 & 5 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 1 \\
+0 & 1 & 1 & 0 & 6 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 \\
+0 & 1 & 1 & 1 & 7 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 \\
+1 & 0 & 0 & 0 & 8 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+1 & 0 & 0 & 1 & 9 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 \\
+1 & 0 & 1 & 0 & A & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 \\
+1 & 0 & 1 & 1 & b & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 1 \\
+1 & 1 & 0 & 0 & C & 0 & 1 & 1 & 0 & 0 & 0 & 1 & 1 \\
+1 & 1 & 0 & 1 & d & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 1 \\
+1 & 1 & 1 & 0 & E & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 1 \\
+1 & 1 & 1 & 1 & F & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 1 \\
+\hline
+\end{tabular}			
+			
+\subsection{Auswertung}
+\begin{description}
+\item[Ressourcenbedarf] 7 Logik-Elemente und 12 Pins
+\end{description}

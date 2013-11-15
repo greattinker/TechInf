@@ -1,0 +1,19 @@
+|Hamming
+sw1[0] => xo[0].IN0
+sw1[1] => xo[1].IN0
+sw1[2] => xo[2].IN0
+sw1[3] => xo[3].IN0
+sw2[0] => xo[0].IN1
+sw2[1] => xo[1].IN1
+sw2[2] => xo[2].IN1
+sw2[3] => xo[3].IN1
+cc[0] <= <VCC>
+cc[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+cc[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+cc[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+cc[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+cc[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+cc[6] <= <GND>
+cc[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

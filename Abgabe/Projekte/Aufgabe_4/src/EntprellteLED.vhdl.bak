@@ -1,0 +1,63 @@
+--
+-- Copyright (c) 20013
+-- Technische Universitaet Dresden, Dresden, Germany
+-- Faculty of Computer Science
+-- Institute for Computer Engineering
+-- Chair for VLSI-Design, Diagnostics and Architecture
+-- 
+-- For internal educational use only.
+-- The distribution of source code or generated files
+-- is prohibited.
+--
+
+--
+-- Entity: Example
+-- Author(s): Martin Zabel, Matthias Haesing
+-- 
+-- Simple example for the Terasic DE0 board.
+--
+-- Revision:    $Revision: 1.1 $
+-- Last change: $Date: 2013-10-09 12:49:38 $
+--
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+
+entity PrellLED is
+  
+  port (
+			clk : in std_logic;
+			btn_e : in std_logic;
+			ld_e  : out  std_logic
+		);
+		
+end PrellLED;
+
+architecture ex of PrellLED is 
+	
+	component Entprellung
+		port (
+			clk : in std_logic;
+			btn : in std_logic;
+			btnout  : out  std_logic
+		);
+	end component;	
+	
+	component AutoLED
+		port (
+			clk : in std_logic;
+			btn : in std_logic;
+			ld  : out  std_logic
+		);
+	end component;	
+	
+	signal but : std_logic;
+
+begin
+
+	prell : Entprellung PORT MAP (clk => clk, btn => btn_e, btnout => but);
+	led1 : AutoLED PORT MAP (clk => clk, btn => but, ld => ld_e);
+	
+end ex;

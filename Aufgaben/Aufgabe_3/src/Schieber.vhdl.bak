@@ -1,0 +1,36 @@
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use Ieee.std_logic_unsigned.all;
+entity Schieber is
+  
+  port (
+		clk_schieber : in std_logic;
+		rst : in std_logic;
+		ld  : out  std_logic_vector(9 downto 0)
+		);
+		
+
+end Schieber;
+
+architecture schieb1 of Schieber is 
+	signal state : std_logic_vector(9 downto 0) := "0000000001";
+begin
+	
+	process(clk_schieber, rst, state)
+	begin
+	
+		if rising_edge(clk_schieber) then
+			if rst = '1' then
+				state <= "0000000001";
+			else
+				state <= state(8 downto 0)&state(9);
+			end if;	
+			
+			ld <= state;
+		end if;	
+	end process;
+	
+		
+end schieb1;

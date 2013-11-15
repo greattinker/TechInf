@@ -1,0 +1,66 @@
+|Schieber
+clk => zaehler:custom_clk.clk
+clk => state[0].CLK
+clk => state[1].CLK
+clk => state[2].CLK
+clk => state[3].CLK
+clk => state[4].CLK
+clk => state[5].CLK
+clk => state[6].CLK
+clk => state[7].CLK
+clk => state[8].CLK
+clk => state[9].CLK
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+ld[0] <= state[0].DB_MAX_OUTPUT_PORT_TYPE
+ld[1] <= state[1].DB_MAX_OUTPUT_PORT_TYPE
+ld[2] <= state[2].DB_MAX_OUTPUT_PORT_TYPE
+ld[3] <= state[3].DB_MAX_OUTPUT_PORT_TYPE
+ld[4] <= state[4].DB_MAX_OUTPUT_PORT_TYPE
+ld[5] <= state[5].DB_MAX_OUTPUT_PORT_TYPE
+ld[6] <= state[6].DB_MAX_OUTPUT_PORT_TYPE
+ld[7] <= state[7].DB_MAX_OUTPUT_PORT_TYPE
+ld[8] <= state[8].DB_MAX_OUTPUT_PORT_TYPE
+ld[9] <= state[9].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Schieber|Zaehler:custom_clk
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+clk => counter[8].CLK
+clk => counter[9].CLK
+clk => counter[10].CLK
+clk => counter[11].CLK
+clk => counter[12].CLK
+clk => counter[13].CLK
+clk => counter[14].CLK
+clk => counter[15].CLK
+clk => counter[16].CLK
+clk => counter[17].CLK
+clk => counter[18].CLK
+clk => counter[19].CLK
+clk => counter[20].CLK
+clk => counter[21].CLK
+clk => counter[22].CLK
+clk => counter[23].CLK
+clk => counter[24].CLK
+clk => counter[25].CLK
+clk => counter[26].CLK
+clk => state.CLK
+clk_out <= state.DB_MAX_OUTPUT_PORT_TYPE
+
+
