@@ -1,6 +1,0 @@
-\section{Anhang}
-\subsection{01-Aufgabe Code}
-\lstinputlisting[caption={VHDL-Code Decoder}, tabsize=2, numbers=left, language=VHDL]{src/Aufgabe_1/Decoder.vhdl}
-
-\subsection{02-Aufgabe}
-\lstinputlisting[caption={VHDL-Code Hamming-Distanz}, tabsize=2, numbers=left, language=VHDL]{src/Aufgabe_2/Hamming.vhdl}
