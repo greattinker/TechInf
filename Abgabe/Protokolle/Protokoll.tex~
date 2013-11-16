@@ -9,7 +9,7 @@
 \usepackage{amssymb}
 \usepackage{pdfpages}
 \usepackage{geometry}
-\geometry{a4paper,left=2cm,right=2.5cm, top=1.5cm, bottom=2cm} 
+\geometry{a4paper,left=2cm,right=2.5cm, top=1cm, bottom=2cm} 
 
 \lstset{%
     columns=fullflexible,

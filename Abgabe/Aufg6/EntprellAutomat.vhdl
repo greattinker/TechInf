@@ -24,7 +24,7 @@ architecture prell of EntprellAutomat is
 		);
 	end component;	
 	
-	type zustaende is (idle, count);  -- 2 Zustände, idle = button betätigen möglich, count = 3ms warten (bis 150.000 hochzählen bei 50Mhz)
+	type zustaende is (idle, count);  -- 2 Zustaende, idle = button betaetigen moeglich, count = 3ms warten (bis 150.000 hochzaehlen bei 50Mhz)
 	attribute enum_encoding : string;
 	attribute enum_encoding of zustaende : type is "1 0";
 	signal z_alt, z_neu : zustaende := idle;

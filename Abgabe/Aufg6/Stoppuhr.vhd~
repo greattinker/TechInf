@@ -80,7 +80,7 @@ begin
 			else
 				onoff_old <= onoff_db;
 				-------------------------
-				--	on/off umschalten wenn btn gedrueckt
+				--	on/off umschalten wenn btn gedrückt
 				--------------------------
 				if(onoff_db = '1' and onoff_db /= onoff_old) then
 					running <= not running;

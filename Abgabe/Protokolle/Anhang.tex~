@@ -1,31 +1,26 @@
 \section{Anhang}
 \subsection{01-Aufgabe Code}
 \lstinputlisting[caption={VHDL-Code Decoder.vhdl}, language=VHDL]{../Aufg1/Decoder.vhdl}
-\newpage
 
 \subsection{02-Aufgabe Code}
 \lstinputlisting[caption={VHDL-Code Hamming.vhdl}, language=VHDL]{../Aufg2/Hamming.vhdl}
-\newpage
 
 
 \subsection{03-Aufgabe Code}
 \lstinputlisting[caption={VHDL-Code Schieber.vhdl}, language=VHDL]{../Aufg3/Schieber.vhdl}
 \lstinputlisting[caption={VHDL-Code Zaehler.vhdl}, language=VHDL]{../Aufg3/Zaehler.vhdl}
-\newpage
 
 
 \subsection{04-Aufgabe Code}
 \lstinputlisting[caption={VHDL-Code LED.vhdl}, language=VHDL]{../Aufg4/LED.vhdl}
 \lstinputlisting[caption={VHDL-Code Entprellung.vhdl}, language=VHDL]{../Aufg4/Entprellung.vhdl}
 \lstinputlisting[caption={VHDL-Code Zaehler.vhdl}, language=VHDL]{../Aufg4/Zaehler.vhdl}
-\newpage
 
 
 \subsection{05-Aufgabe Code}
 \lstinputlisting[caption={VHDL-Code hallo.vhdl}, language=VHDL]{../Aufg5/hallo.vhdl}
 \lstinputlisting[caption={VHDL-Code Decoder.vhdl}, language=VHDL]{../Aufg5/Decoder.vhdl}
 \lstinputlisting[caption={VHDL-Code Multiplex.vhdl}, language=VHDL]{../Aufg5/Multiplex.vhdl}
-\newpage
 
 
 \subsection{06-Aufgabe Code}

@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
 
--- Decoder bekommt einen 3bit breiten Code fuer ein Zeichen und gibt den 8bit breiten Code fuer die 7-Segment Anzeige des Zeichens aus
+-- Decoder bekommt einen 3bit breiten Code für ein Zeichen und gibt den 8bit breiten Code für die 7-Segment Anzeige des Zeichens aus
 
 entity Decoder is 
 
