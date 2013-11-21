@@ -16,7 +16,7 @@ end Zaehler;
 architecture zae1 of Zaehler is 
 		
 
-		signal counter : unsigned(26 downto 0) := (others => '0');  -- Zaehler mod 25.000.000
+		signal counter : unsigned(26 downto 0) := (others => '0');  -- Zaehler mod 50.000.000
 		signal state : std_logic := '1';
 begin
 	
