@@ -1,4 +1,35 @@
 \section{Aufgabe 5 - HALLO-Anzeige}
 \subsection{Entwurf}
+	\begin{description}
+	\item[zu a)] Es müssen 5 Zeichen kodiert werden (H, A, L, O, Leerzeichen).\\
+			\\\(ld\, 5 = 3\)\\\\
+			Daher werden für eine Binärkodierung mindestens 3 Bits benötigt.\\\\
+			\begin{tabular}{|c|c|c||c|c|c|c|c|c|c|c|c|}
+		\hline
+		\multicolumn{3}{|c||}{Input} & \multicolumn{9}{|c|}{Output} \\
+		\hline
+		\textsc{BIT2} & \textsc{BIT1} & \textsc{BIT0} & 
+		\textsc{CHAR} & \textsc{A} & \textsc{B} & \textsc{C} & \textsc{D} & \textsc{E} & \textsc{F} & \textsc{G} & \textsc{dot} \\ 
+		\hline
+		\hline
+		0 & 0 & 0 &   & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\ 
+		0 & 0 & 1 & H & 1 & 0 & 0 & 1 & 0 & 0 & 0 & 1 \\
+		0 & 1 & 0 & A & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 \\
+		0 & 1 & 1 & L & 1 & 1 & 1 & 0 & 0 & 0 & 1 & 1 \\
+		1 & 0 & 0 & O & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 \\
+		\hline
+	\end{tabular}
+	\item[b)] Für das Schieberegister ist der Zählerzustand ein Enable-Signal
+	\item[c)]
+	\end{description}
+
+	
 
 \subsection{Auswertung}
+	\paragraph{Ressourcenbedarf}
+	\begin{itemize} 
+	\item 73 Logik-Elemente
+	\item 61 Register
+	\item 34 Pins 
+	\item maximale Taktfrequenz von 262 MHz
+	\end{itemize}
