@@ -3,18 +3,18 @@
 \begin{description}
 \item[a)] Der Zähler ist nach 50 Millionen Schritten zurückzusetzen (50 MHz Takt entspricht 50 Millionen Taktperioden pro Sekunde)
 \item[b)] Für das Schieberegister ist der Zählerzustand ein Enable-Signal
-\item[c)] 
+\item[c)] \hfill 
 	\begin{description}
-	\item[Input] 
+	\item[Input] \hfill 
 		\begin{itemize}
 			\item 50MHz Takt
 			\item Reset (Schiebeschalter SW0)
 		\end{itemize}
 	\item[Output] LED-Zeile
-	\item[Ansatz] 2 Komponenten Schieber und Zähler 
+	\item[Ansatz] 2 Komponenten: Schieber und Zähler 
 	\end{description}	
 \end{description}
-\paragraph{Zähler} gibt alle 50-Millionen Taktperioden einen Takt lang ein enable-Signal aus. 
+\paragraph{Zähler} gibt alle 50-Millionen Taktperioden (50MHz Takt ergibt $50\cdot10^6$ Taktschritte pro Sekunde) einen Takt lang ein enable-Signal aus. 
 (\ref{lst:03-zaehler}~Zaehler.vhdl-Code)
 \paragraph{Schieber} beinhaltet den Zähler als Komponente und verschiebt bei dessen enable-Signal die LED-Anzeige um eine Stelle pro Takt. (\ref{lst:03-schieber}~Schieber.vhdl-Code)
 
