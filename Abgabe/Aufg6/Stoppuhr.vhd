@@ -18,6 +18,7 @@ end Stoppuhr;
 
 architecture uhr of Stoppuhr is 
 
+	-- Zaehler: gibt jede Zehntelsekunde einen Peak aus
 	component Zaehler
 		port (
 			clk : in std_logic;
@@ -27,6 +28,7 @@ architecture uhr of Stoppuhr is
 			);
 	end component;
 	
+	-- entprellt das Eingangssignal des (on/off) Buttons
 	component EntprellAutomat
 		port (
 			clk : in std_logic;
@@ -35,6 +37,7 @@ architecture uhr of Stoppuhr is
 			);
 	end component;
 	
+	-- 4 Decoder: Je ein Decoder dekodiert eine Stelle der aktuellen Zeit für die 7-Segment Anzeige
 	component Decoder
 		port (
 			clk : in std_logic;
@@ -43,9 +46,16 @@ architecture uhr of Stoppuhr is
 			);
 	end component;
 	
+	-- Steuersignal und Ausgabesignal des Zaehlers
 	signal timer_on, peak : std_logic := '0';
+	
+	-- Je ein Signal für je eine Stelle der aktuellen Zeit
 	signal min, sec1, sec2, ms : unsigned(3 downto 0) := (others => '0');
+	
+	-- Steuersignal für die Stoppuhr und Signale für den entprellten Button, sowie des alten Signalpegels des Buttons 
 	signal running, onoff_db, onoff_old : std_logic := '0';
+	
+	-- Signale für die 7-Segment Anzeige
 	signal segMin, segSec1, segSec2, segMs : std_logic_vector(7 downto 0) := (others => '0');
 	
 
@@ -61,6 +71,7 @@ begin
 										btn => onoff, 
 										btnout => onoff_db);
 										
+	-- Jeder Decoder dekodiert eine Stelle der aktuellen Zeit
 	dec0 : Decoder PORT MAP(clk => clk, code => std_logic_vector(min), decoded => segMin);
 	dec1 : Decoder PORT MAP(clk => clk, code => std_logic_vector(sec1), decoded => segSec1);
 	dec2 : Decoder PORT MAP(clk => clk, code => std_logic_vector(sec2), decoded => segSec2);
@@ -70,7 +81,7 @@ begin
 	process(clk)
 	begin
 		if rising_edge(clk) then
-			if(rst = '1') then
+			if(rst = '1') then											-- aktiver Reset setzt alles zurück und stoppt die Uhr
 				running <= '0';
 				timer_on <= '0';
 				min <= (others => '0');
@@ -79,52 +90,49 @@ begin
 				ms <= (others => '0');
 			else
 				onoff_old <= onoff_db;
-				-------------------------
-				--	on/off umschalten wenn btn gedrueckt
-				--------------------------
-				if(onoff_db = '1' and onoff_db /= onoff_old) then
-					running <= not running;
-					timer_on <= not timer_on;
-				end if;
+				if(onoff_db = '1' and onoff_db /= onoff_old) then		--------------------------------------
+					running <= not running;								--	on/off umschalten wenn btn gedrückt
+					timer_on <= not timer_on;							--------------------------------------
+				end if;	
 		
-				if(running = '1') then
-					if(peak = '1') then
-						if(ms = to_unsigned(9, 4)) then
-							if(sec2 = to_unsigned(9, 4)) then
-								if(sec1 = to_unsigned(5, 4)) then
-									if(min = to_unsigned(9, 4)) then
-										min <= (others => '0');
-										sec1 <= (others => '0');
-										sec2 <= (others => '0');
-										ms <= (others => '0');
-									else
-										min <= min + 1;
-										sec1 <= (others => '0');
-										sec2 <= (others => '0');
-										ms <= (others => '0');
-									end if;
-								else
-									sec1 <= sec1 + 1;
-									sec2 <= (others => '0');
-									ms <= (others => '0');
-								end if;
-							else
-								sec2 <= sec2 + 1;
-								ms <= (others => '0');
-							end if;
-						else
-							ms <= ms + 1;
-						end if;
-					end if;
-				end if;
+				if(running = '1') then									-- Wenn die Uhr läuft...
+					if(peak = '1') then									-- ...und der Zaehler einen Peak ausgibt...
+						if(ms = to_unsigned(9, 4)) then					------------------------------------------
+							if(sec2 = to_unsigned(9, 4)) then			--
+								if(sec1 = to_unsigned(5, 4)) then		--
+									if(min = to_unsigned(9, 4)) then	--
+										min <= (others => '0');			--
+										sec1 <= (others => '0');		--
+										sec2 <= (others => '0');		--
+										ms <= (others => '0');			--
+									else								--
+										min <= min + 1;					-- ...erhöhe die aktuelle Zeit
+										sec1 <= (others => '0');		-- um eine Zehntelsekunde (mod 10 Minuten)
+										sec2 <= (others => '0');		--
+										ms <= (others => '0');			--
+									end if;								--
+								else									--
+									sec1 <= sec1 + 1;					--
+									sec2 <= (others => '0');			--
+									ms <= (others => '0');				--
+								end if;									--
+							else										--
+								sec2 <= sec2 + 1;						--
+								ms <= (others => '0');					--
+							end if;										--
+						else											--
+							ms <= ms + 1;								--
+						end if;											--
+					end if;												--
+				end if;													------------------------------------------
 				
 			end if;
 		end if;
 	end process;
 	
-	seg4 <= segMin and "11111110";
+	seg4 <= segMin and "11111110";	-- Punkt der 7-Segment Anzeige aktivieren
 	seg3 <= segSec1;
-	seg2 <= segSec2 and "11111110";
+	seg2 <= segSec2 and "11111110"; -- Punkt der 7-Segment Anzeige aktivieren
 	seg1 <= segMS;
 	
 end uhr;
