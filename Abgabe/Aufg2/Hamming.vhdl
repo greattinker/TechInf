@@ -1,4 +1,3 @@
-
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -6,9 +5,9 @@ use ieee.numeric_std.all;
 entity Hamming is
   
   port (
-    sw1   : in  std_logic_vector(3 downto 0);
-    sw2   : in  std_logic_vector(3 downto 0);
-    cc   : out std_logic_vector(7 downto 0));
+    sw1   : in  std_logic_vector(3 downto 0); -- Erstes 4bit Wort
+    sw2   : in  std_logic_vector(3 downto 0); -- Zweites 4bit Wort
+    cc   : out std_logic_vector(7 downto 0)); -- 7 Segment Ausgabe
 
 end Hamming;
 
@@ -16,8 +15,9 @@ architecture ham1 of Hamming is
 	signal xo : std_logic_vector(3 downto 0);
 begin
 	
-	xo <= sw1 xor sw2;
+	xo <= sw1 xor sw2; -- Jede Stelle nur 1, wenn sich die Wörter an der Stelle unterscheiden
 	
+	-- Je nach Anzahl der Einsen im Signal "xo" wird die Ausgabe 0-4 ausgegeben.
 	with xo select
 		cc <= "00000011" when "0000",
 				"10011111" when "0001",

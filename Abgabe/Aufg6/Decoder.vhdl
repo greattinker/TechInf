@@ -3,8 +3,6 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
 
--- Decoder bekommt einen 3bit breiten Code fuer ein Zeichen und gibt den 8bit breiten Code fuer die 7-Segment Anzeige des Zeichens aus
-
 entity Decoder is 
 
 	port ( 
@@ -15,10 +13,14 @@ end Decoder;
 
 architecture decoder1 of Decoder is 
 		
-	signal decoded_out : std_logic_vector(7 downto 0) := (others => '0');
+	signal decoded_out : std_logic_vector(7 downto 0) := (others => '0'); -- Signal, dass an den Ausgang "decoded" angelegt wird
 	
 	begin
 	
+	----------------------------------------------------
+	-- Dekodieren eines 4bit breiten Wortes in ein 8bit
+	-- breites Wort für die 7 Segment Anzeige
+	----------------------------------------------------
 	process (clk)
 	begin
 		if rising_edge(clk) then

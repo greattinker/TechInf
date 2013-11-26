@@ -7,20 +7,26 @@ entity Zaehler is
   
   port (
 		clk : in std_logic;
-		zaehler_time : in unsigned(31 downto 0);
-		zaehler_on : in std_logic;
-		peak_out  : out  std_logic
+		zaehler_time : in unsigned(31 downto 0); -- steuert wieviele Takte der Zaehler zaehlen soll, bis er einen peak ausgeben soll. (Zaehler zaehlt mod zaehler_time)
+		zaehler_on : in std_logic; -- Steuersignal, bei 1 läuft der Zaehler, bei 0 wird der Zaehler gestoppt und zurückgesetzt
+		peak_out  : out  std_logic -- gibt für einen Takt eine eins aus, sobald der durch "zaehler_time" angelegte Wert erreicht ist
 		);
 		
 end Zaehler;
 
 architecture timer of Zaehler is
 
-	signal counter : unsigned(31 downto 0) := (others => '0');
-	signal peak : std_logic := '0';
+	signal counter : unsigned(31 downto 0) := (others => '0'); -- Zaehlsignal
+	signal peak : std_logic := '0'; -- Signal, dass an den Ausgang "peak_out" gegeben wird
 
 begin
 
+	--------------------------------------------------------------------------------------
+	-- Liegt "zaehler_on" auf eins, wird das Signal "counter" inkrementiert.
+	-- Wird der durch "zaehler_time" angegebene Maximalwert erreicht wird für einen Takt
+	-- eine 1 an das Signal "peak" ausgegeben und "counter" auf 0 zurückgesetzt
+	-- Liegt "zaehler_on" auf null, wird "counter" auf 0 gesetzt und nicht hochgezaehlt.
+	--------------------------------------------------------------------------------------
 	process(clk)
 	begin
 		if rising_edge(clk) then

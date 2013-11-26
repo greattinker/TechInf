@@ -1,25 +1,3 @@
---
--- Copyright (c) 20013
--- Technische Universitaet Dresden, Dresden, Germany
--- Faculty of Computer Science
--- Institute for Computer Engineering
--- Chair for VLSI-Design, Diagnostics and Architecture
--- 
--- For internal educational use only.
--- The distribution of source code or generated files
--- is prohibited.
---
-
---
--- Entity: Example
--- Author(s): Martin Zabel, Matthias Haesing
--- 
--- Simple example for the Terasic DE0 board.
---
--- Revision:    $Revision: 1.1 $
--- Last change: $Date: 2013-10-09 12:49:38 $
---
-
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -30,25 +8,28 @@ entity Multiplex is
   port (
 		clk : in std_logic;
 		rst : in std_logic;
-		led_out  : out std_logic_vector(11 downto 0)
+		led_out  : out std_logic_vector(11 downto 0) -- 12bit breiter Ausgang (3bit je Zeichen)
 		);
 		
 end Multiplex;
 
 -- 000: _
---	001: H
+-- 001: H
 -- 010: A
 -- 011: L
 -- 100: O
 
 architecture multi of Multiplex is 
---                                                 _  _  _  _  H  A  L  L  O  _  _  _
-	signal tex : std_logic_vector(35 downto 0) := "000000000000001010011011100000000000";
-	signal counter : unsigned(24 downto 0) := (others => '0');
-	signal mul : unsigned(3 downto 0);
+--                                                  _  _  _  _  H  A  L  L  O  _  _  _
+	signal tex : std_logic_vector(35 downto 0) := "000000000000001010011011100000000000"; -- kompletter Schriftzug der einmal durchlaufen wird
+	signal counter : unsigned(24 downto 0) := (others => '0'); -- Zählersignal (mod 25.000.000)
+	signal mul : unsigned(3 downto 0); -- Steuersignal Multiplexer (mod 10) : 9 mögliche 12bit breite Teilworte des kompletten Schriftzugs
 
 begin
 
+	------------------------------------------------------------------
+	-- Inkrementieren des Steuersignals "mul" alle 25.000.000 Takte
+	------------------------------------------------------------------
 	process(clk)
 	begin
 		if rising_edge(clk) then
@@ -56,7 +37,6 @@ begin
 				counter <= (others => '0');
 				mul <= (others => '0');
 			elsif(counter = "1011111010111100000111111") then
-		--	elsif(counter = "0000000000001100000111111") then
 				counter <= (others => '0');
 				mul <= mul + 1;
 				if(mul = "1000") then
@@ -68,6 +48,9 @@ begin
 		end if;
 	end process;
 	
+	------------------------------------------------------------------------------------------------------------
+	-- Je nach Steuersignal "mul" wird ein anderes 12bit breites Teilwort des kompletten Schriftzugs ausgegeben
+	------------------------------------------------------------------------------------------------------------
 	with mul select
 		led_out <= 	tex(35 downto 24) when "0000",
 						tex(32 downto 21) when "0001",
