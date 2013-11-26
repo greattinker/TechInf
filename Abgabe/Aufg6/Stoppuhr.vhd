@@ -81,7 +81,7 @@ begin
 	process(clk)
 	begin
 		if rising_edge(clk) then
-			if(rst = '1') then											-- aktiver Reset setzt alles zurück und stoppt die Uhr
+			if(rst = '1') then											-- aktiver Reset setzt alles zurueck und stoppt die Uhr
 				running <= '0';
 				timer_on <= '0';
 				min <= (others => '0');
@@ -91,11 +91,11 @@ begin
 			else
 				onoff_old <= onoff_db;
 				if(onoff_db = '1' and onoff_db /= onoff_old) then		--------------------------------------
-					running <= not running;								--	on/off umschalten wenn btn gedrückt
+					running <= not running;								--	on/off umschalten wenn btn gedrueckt
 					timer_on <= not timer_on;							--------------------------------------
 				end if;	
 		
-				if(running = '1') then									-- Wenn die Uhr läuft...
+				if(running = '1') then									-- Wenn die Uhr laeuft...
 					if(peak = '1') then									-- ...und der Zaehler einen Peak ausgibt...
 						if(ms = to_unsigned(9, 4)) then					------------------------------------------
 							if(sec2 = to_unsigned(9, 4)) then			--
@@ -106,7 +106,7 @@ begin
 										sec2 <= (others => '0');		--
 										ms <= (others => '0');			--
 									else								--
-										min <= min + 1;					-- ...erhöhe die aktuelle Zeit
+										min <= min + 1;					-- ...erhoehe die aktuelle Zeit
 										sec1 <= (others => '0');		-- um eine Zehntelsekunde (mod 10 Minuten)
 										sec2 <= (others => '0');		--
 										ms <= (others => '0');			--

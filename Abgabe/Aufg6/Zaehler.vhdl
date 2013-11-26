@@ -8,7 +8,7 @@ entity Zaehler is
   port (
 		clk : in std_logic;
 		zaehler_time : in unsigned(31 downto 0); -- steuert wieviele Takte der Zaehler zaehlen soll, bis er einen peak ausgeben soll. (Zaehler zaehlt mod zaehler_time)
-		zaehler_on : in std_logic; -- Steuersignal, bei 1 läuft der Zaehler, bei 0 wird der Zaehler gestoppt und zurückgesetzt
+		zaehler_on : in std_logic; -- Steuersignal, bei 1 laeuft der Zaehler, bei 0 wird der Zaehler gestoppt und zurueckgesetzt
 		peak_out  : out  std_logic -- gibt für einen Takt eine eins aus, sobald der durch "zaehler_time" angelegte Wert erreicht ist
 		);
 		

@@ -22,8 +22,8 @@ end Multiplex;
 architecture multi of Multiplex is 
 --                                                  _  _  _  _  H  A  L  L  O  _  _  _
 	signal tex : std_logic_vector(35 downto 0) := "000000000000001010011011100000000000"; -- kompletter Schriftzug der einmal durchlaufen wird
-	signal counter : unsigned(24 downto 0) := (others => '0'); -- Zählersignal (mod 25.000.000)
-	signal mul : unsigned(3 downto 0); -- Steuersignal Multiplexer (mod 10) : 9 mögliche 12bit breite Teilworte des kompletten Schriftzugs
+	signal counter : unsigned(24 downto 0) := (others => '0'); -- Zaehlersignal (mod 25.000.000)
+	signal mul : unsigned(3 downto 0); -- Steuersignal Multiplexer (mod 10) : 9 moegliche 12bit breite Teilworte des kompletten Schriftzugs
 
 begin
 

@@ -6,7 +6,7 @@ use ieee.numeric_std.all;
 ------------------------------------------------------------------
 -- Top Level:
 -- Verbindet den Multiplexer mit 4 Decodern und legt den Ausgang
--- je eines Decoders an eine 7 Segment anzeige
+-- je eines Decoders an eine 7 Segment Anzeige
 ------------------------------------------------------------------
 entity Hallo is 
 
@@ -15,7 +15,7 @@ entity Hallo is
 		rst : in std_logic;
 		seg1 : out std_logic_vector(7 downto 0); 	--------------
 		seg2 : out std_logic_vector(7 downto 0); 	-- 7 Segment
-		seg3 : out std_logic_vector(7 downto 0);	-- Ausgänge
+		seg3 : out std_logic_vector(7 downto 0);	-- Ausgaenge
 		seg4 : out std_logic_vector(7 downto 0));	--------------
 
 end Hallo;

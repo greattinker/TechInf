@@ -15,7 +15,7 @@ architecture ham1 of Hamming is
 	signal xo : std_logic_vector(3 downto 0);
 begin
 	
-	xo <= sw1 xor sw2; -- Jede Stelle nur 1, wenn sich die Wörter an der Stelle unterscheiden
+	xo <= sw1 xor sw2; -- Jede Stelle nur 1, wenn sich die Woerter an der Stelle unterscheiden
 	
 	-- Je nach Anzahl der Einsen im Signal "xo" wird die Ausgabe 0-4 ausgegeben.
 	with xo select
