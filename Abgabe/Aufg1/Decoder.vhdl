@@ -1,4 +1,3 @@
-
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -12,11 +11,11 @@ entity Decoder is
 end Decoder;
 
 architecture Dec1 of Decoder is 
-begin  -- rtl
+begin
 
-  -----------------------------------------------------
-  -- Outputs
-  -----------------------------------------------------
+  -----------------------------------------------------------------
+  -- Outputs: 4 bit breites Wort in Hexadezimale 7-Segment Anzeige
+  -----------------------------------------------------------------
   with sw select
 		cc <= "00000011" when "0000",
 				"10011111" when "0001",
