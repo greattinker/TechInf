@@ -37,7 +37,7 @@ architecture uhr of Stoppuhr is
 			);
 	end component;
 	
-	-- 4 Decoder: Je ein Decoder dekodiert eine Stelle der aktuellen Zeit für die 7-Segment Anzeige
+	-- 4 Decoder: Je ein Decoder dekodiert eine Stelle der aktuellen Zeit fuer die 7-Segment Anzeige
 	component Decoder
 		port (
 			clk : in std_logic;
@@ -49,13 +49,13 @@ architecture uhr of Stoppuhr is
 	-- Steuersignal und Ausgabesignal des Zaehlers
 	signal timer_on, peak : std_logic := '0';
 	
-	-- Je ein Signal für je eine Stelle der aktuellen Zeit
+	-- Je ein Signal fuer je eine Stelle der aktuellen Zeit
 	signal min, sec1, sec2, ms : unsigned(3 downto 0) := (others => '0');
 	
-	-- Steuersignal für die Stoppuhr und Signale für den entprellten Button, sowie des alten Signalpegels des Buttons 
+	-- Steuersignal fuer die Stoppuhr und Signale fuer den entprellten Button, sowie des alten Signalpegels des Buttons 
 	signal running, onoff_db, onoff_old : std_logic := '0';
 	
-	-- Signale für die 7-Segment Anzeige
+	-- Signale fuer die 7-Segment Anzeige
 	signal segMin, segSec1, segSec2, segMs : std_logic_vector(7 downto 0) := (others => '0');
 	
 

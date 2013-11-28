@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.8)  26 NOV 2013 15:46
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.8)  28 NOV 2013 12:55
 entering extended mode
  %&-line parsing enabled.
 **Protokoll.tex
@@ -669,8 +669,9 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box33
 \@float@everytoks=\toks27
 \@floatcapt=\box34
-)
-No file Protokoll.aux.
+) (./Protokoll.aux
+(./01-Aufgabe.aux) (./02-Aufgabe.aux) (./03-Aufgabe.aux) (./04-Aufgabe.aux)
+(./05-Aufgabe.aux) (./06-Aufgabe.aux) (./Anhang.aux))
 \openout1 = `Protokoll.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
@@ -688,6 +689,7 @@ LaTeX Font Info:    ... okay on input line 73.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
 LaTeX Font Info:    ... okay on input line 73.
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 73.
+
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -758,14 +760,15 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
 LaTeX Info: Redefining \ref on input line 73.
 LaTeX Info: Redefining \pageref on input line 73.
+ (./Protokoll.out)
+(./Protokoll.out)
 \@outlinefile=\write3
 \openout3 = `Protokoll.out'.
 
 \AtBeginShipoutBox=\box36
 LaTeX Font Info:    Try loading font information for OT1+lmss on input line 76.
 
-
-(/usr/share/texmf/tex/latex/lm/ot1lmss.fd
+ (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OML+lmm on input line 76.
@@ -817,11 +820,6 @@ File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 8.
 
-
-LaTeX Warning: Reference `lst:01-decoder' on page 2 undefined on input line 35.
-
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 8--36
 
  []
@@ -837,27 +835,14 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
 ]
 \openout2 = `02-Aufgabe.aux'.
 
- (./02-Aufgabe.tex
-
-LaTeX Warning: Reference `lst:02-hamming' on page 3 undefined on input line 12.
-
-
-) [3
+ (./02-Aufgabe.tex) [3
 
 
 ]
 \openout2 = `03-Aufgabe.aux'.
 
- (./03-Aufgabe.tex
 
-LaTeX Warning: Reference `lst:03-zaehler' on page 4 undefined on input line 18.
-
-
-
-LaTeX Warning: Reference `lst:03-schieber' on page 4 undefined on input line 19
-.
-
-) [4
+(./03-Aufgabe.tex) [4
 
 
 ]
@@ -868,29 +853,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-<resources/04-entpreller.png, id=44, 662.475pt x 547.04375pt>
-File: resources/04-entpreller.png Graphic file (type png)
-
-<use resources/04-entpreller.png>
-<resources/04-led.png, id=45, 493.845pt x 376.40625pt>
+<resources/04-led.png, id=140, 493.845pt x 376.40625pt>
 File: resources/04-led.png Graphic file (type png)
 
 <use resources/04-led.png>
+<resources/04-entpreller.png, id=142, 665.48625pt x 611.28375pt>
+File: resources/04-entpreller.png Graphic file (type png)
 
-LaTeX Warning: Reference `lst:04-led' on page 5 undefined on input line 11.
-
-
-LaTeX Warning: Reference `lst:04-entprellung' on page 5 undefined on input line
- 13.
+<use resources/04-entpreller.png> [5
 
 
-LaTeX Warning: Reference `lst:04-zaehler' on page 5 undefined on input line 15.
-
-
-[5
-
-
- <./resources/04-entpreller.png (PNG copy)> <./resources/04-led.png (PNG copy)>
+ <./resources/04-led.png (PNG copy)> <./resources/04-entpreller.png (PNG copy)>
 ]) [6]
 \openout2 = `05-Aufgabe.aux'.
 
@@ -915,10 +888,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--22
 ]
 \openout2 = `06-Aufgabe.aux'.
 
- (./06-Aufgabe.tex) [8
+ (./06-Aufgabe.tex
+<resources/06-stopuhr.png, id=167, 1357.07pt x 1021.8175pt>
+File: resources/06-stopuhr.png Graphic file (type png)
+
+<use resources/06-stopuhr.png> [8
 
 
-]
+ <./resources/06-stopuhr.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+<resources/06-Entprellautomat.png, id=172, 488.57532pt x 417.81094pt>
+File: resources/06-Entprellautomat.png Graphic file (type png)
+
+<use resources/06-Entprellautomat.png>
+<resources/06-Zaehler.png, id=173, 371.13657pt x 314.67563pt>
+File: resources/06-Zaehler.png Graphic file (type png)
+
+<use resources/06-Zaehler.png>
+<resources/06-Stoppuhr.png, id=174, 601.4972pt x 515.67656pt>
+File: resources/06-Stoppuhr.png Graphic file (type png)
+
+<use resources/06-Stoppuhr.png> [9 <./resources/06-Entprellautomat.png (PNG cop
+y)> <./resources/06-Zaehler.png (PNG copy)>]) [10 <./resources/06-Stoppuhr.png 
+(PNG copy)>]
 \openout2 = `Anhang.aux'.
 
  (./Anhang.tex
@@ -928,56 +923,52 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 (../Aufg1/Decoder.vhdl
 LaTeX Font Info:    Font shape `OT1/lmtt/bx/n' in size <9> not available
 (Font)              Font shape `OT1/lmtt/b/n' tried instead on input line 1.
-) [9
+) [11
 
 
-] (../Aufg2/Hamming.vhdl
+] (../Aufg2/Hamming.vhdl) [12]
+(../Aufg3/Schieber.vhdl) (../Aufg3/Zaehler.vhdl [13]) [14] (../Aufg4/LED.vhdl)
+(../Aufg4/Entprellung.vhdl [15] [16]) (../Aufg4/Zaehler.vhdl) [17]
+(../Aufg5/hallo.vhdl [18]) (../Aufg5/Decoder.vhdl) (../Aufg5/Multiplex.vhdl
+[19]
+Overfull \hbox (79.33344pt too wide) in paragraph at lines 51--52
+[][][][][][][]  
+ []
 
-! Package inputenc Error: Unicode char \u8:Ã\lst@EC¶ not set up for use with La
-TeX.
 
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.18 ... Jede Stelle nur 1, wenn sich die WÃ¶rter 
-                                                  an der Stelle unterscheiden
-? 
-! Interruption.
-\GenericError  ...                                
-                                                  \endgroup 
-l.18 ... Jede Stelle nur 1, wenn sich die WÃ¶rter 
-                                                  an der Stelle unterscheiden
-? 
-! Interruption.
-l.56704 
-        
-? x
- 
+Overfull \hbox (79.33344pt too wide) in paragraph at lines 53--54
+[][][][][][][]  
+ []
+
+) [20] (../Aufg6/Stoppuhr.vhd [21] [22]) (../Aufg6/Decoder.vhdl)
+(../Aufg6/EntprellAutomat.vhdl [23] [24]) (../Aufg6/Zaehler.vhdl)) [25]
+(./Protokoll.aux (./01-Aufgabe.aux) (./02-Aufgabe.aux) (./03-Aufgabe.aux)
+(./04-Aufgabe.aux) (./05-Aufgabe.aux) (./06-Aufgabe.aux) (./Anhang.aux)) ) 
 Here is how much of TeX's memory you used:
- 9953 strings out of 495061
- 141349 string characters out of 1182622
- 310074 words of memory out of 3000000
- 12829 multiletter control sequences out of 15000+50000
- 46632 words of font info for 49 fonts, out of 3000000 for 9000
+ 11044 strings out of 495061
+ 157591 string characters out of 1182622
+ 548384 words of memory out of 3000000
+ 13020 multiletter control sequences out of 15000+50000
+ 43686 words of font info for 48 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 43i,11n,45p,275b,1262s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share
-/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
--rmsc.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc1
-0.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/font
-s/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb><
-/usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public
-/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/t
-exmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texmf/fonts/type1/public/lm/l
-mtt9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtti10.pfb>
-Output written on Protokoll.pdf (9 pages, 373369 bytes).
+ 45i,12n,45p,301b,1865s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr
+/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dvips/l
+m/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texm
+f/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rmsc
+.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb
+></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/sh
+are/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/l
+mtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texmf/
+fonts/type1/public/lm/lmtt9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtti10
+.pfb>
+Output written on Protokoll.pdf (25 pages, 654000 bytes).
 PDF statistics:
- 198 PDF objects out of 1000 (max. 8388607)
- 79 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1321 PDF objects out of 1440 (max. 8388607)
+ 903 named destinations out of 1000 (max. 500000)
+ 231 words of extra memory for PDF output out of 10000 (max. 10000000)
 

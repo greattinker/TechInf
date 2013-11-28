@@ -30,13 +30,13 @@ architecture prell of EntprellAutomat is
 	signal z_alt, z_neu : zustaende := idle; -- alter und neuer Zustand des Automaten
 	signal btn_s, btn_output : std_logic := '0'; -- Synchronisiertes (Eingangs)Buttonsignal und Ausgangssignal des Automaten
 	signal btn_old : std_logic := '0'; -- Speichern des vorherigen "btn_s" Pegels
-	signal btn2 : std_logic := '1'; -- Synchronisierungssignal für den Button
+	signal btn2 : std_logic := '1'; -- Synchronisierungssignal fuer den Button
 	signal timer_on : std_logic := '0'; -- Steuerung des externen Zaehler Moduls
 	signal peak : std_logic := '0'; -- Ausgabe des externen Zaehler Moduls
 
 begin
 
-	-- enthaltener Zaehler, der (falls aktiviert) alle 3ms für einen Takt eine eins an das Signal "peak" ausgibt
+	-- enthaltener Zaehler, der (falls aktiviert) alle 3ms fuer einen Takt eine eins an das Signal "peak" ausgibt
 	timer : Zaehler PORT MAP (clk => clk, zaehler_time => to_unsigned(150000,32), zaehler_on => timer_on, peak_out => peak);
 
 	-- Synchronisieren des Eingabesignals (Button) und Speichern des alten "btn_s" Pegels
@@ -60,7 +60,7 @@ begin
 										z_neu <= count;
 										timer_on <= '1';
 									end if;
-				when count =>	if(peak = '1') then				-- Wechseln zurück in "idle", sobald der Zaehler eine eins an "peak" anlegt (3ms vergangen)
+				when count =>	if(peak = '1') then				-- Wechseln zurueck in "idle", sobald der Zaehler eine eins an "peak" anlegt (3ms vergangen)
 										z_neu <= idle;
 										timer_on <= '0';
 									end if;

@@ -11,7 +11,7 @@
 
 	\paragraph{Zaehler} implementiert einen Zähler, der durch ein Signal definierte Schritte zählt. Ausgegeben wird der aktuelle Zustand des Zählers. Eingegeben ein Reset-Signal. (\ref{lst:04-zaehler}~Zaehler.vhdl-Code) 
 	\paragraph{Kopplung} \hfill\\
-	Es wird eine synchrone Automatenkopplung mit einem Taktsignal verwendet.
+	Es wird eine sequentielle Automatenkopplung verwendet.
 
 
 \subsection{Auswertung}

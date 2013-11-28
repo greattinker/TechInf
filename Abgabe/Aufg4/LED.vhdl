@@ -14,7 +14,7 @@ entity LED is
 end LED;
 
 architecture led1 of LED is 
-	
+	-- Komponente Entprellung fuer das btn-Signal wird eingebunden	
 	component Entprellung
 		port (
 			clk : in std_logic;
@@ -37,38 +37,22 @@ architecture led1 of LED is
 										btn_out => btn_out);
 	process (btn_led )
 	begin
-			if btn_led = '0' then
+			if btn_led = '0' then -- aenderung der led bei uebergang des entprellten btn-signals in den aktiven zustand
 				led_sig <= not led_sig;
 			end if;
 	end process;	
 	
-	process (clk)
-	begin
-		if rising_edge(clk) then
-			btn_in_d <= btn;
-		end if;
-	end process;
-	
+	-- synchronisierung der signale	
 	process (clk)
 	begin
 		if rising_edge(clk) then
 			btn_in <= btn_in_d;
-		end if;
-	end process;
-	
-	process (clk)
-	begin
-		if rising_edge(clk) then
+			btn_in_d <= btn;
 			btn_out_d <= btn_out;
-		end if;
-	end process;
-	
-	process (clk)
-	begin
-		if rising_edge(clk) then
 			btn_led <= btn_out_d;
 		end if;
 	end process;
 	
+			
 	ld <= not led_sig;
 end led1;

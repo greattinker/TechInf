@@ -8,7 +8,7 @@ entity Zaehler is
   
   port (
 		clk : in std_logic;
-		count_steps : in unsigned(31 downto 0);
+		count_steps : in unsigned(31 downto 0);	-- zu zaehlende taktschritte, bis zur deaktivierung des counter_state signals
 		counter_reset : in std_logic;
 		counter_state : out std_logic);
 		
@@ -27,11 +27,11 @@ begin
 	begin
 			
 		if rising_edge(clk) then
-			if reset = '1' then
+			if reset = '1' then -- zuruecksetzen des zaehlers
 				counter <= (others => '0');
 			end if;
 			
-			if counter < count_steps then
+			if counter < count_steps then -- zaehler aktiv
 				state <= '1';
 				counter <= counter + 1;
 			else
@@ -40,21 +40,15 @@ begin
 		end if;	
 	end process;	
 	
-	--d-ff1 for reset 
+	-- synchronisierung des reset-signals
 	process(clk)
 	begin
 		if rising_edge(clk) then
 			reset_d <= counter_reset;
-		end if;
-	end process;
-	
-	--d-ff2 for reset
-	process(clk)
-	begin
-		if rising_edge(clk) then
 			reset <= reset_d;
 		end if;
 	end process;
+	
 	
 	counter_state <= state;
 end zae1;
