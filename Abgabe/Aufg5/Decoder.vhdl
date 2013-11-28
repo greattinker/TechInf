@@ -19,7 +19,7 @@ architecture decoder1 of Decoder is
 	
 	----------------------------------------------------
 	-- Dekodieren eines 3bit breiten Wortes in ein 8bit
-	-- breites Wort für die 7 Segment Anzeige
+	-- breites Wort fuer die 7 Segment Anzeige
 	----------------------------------------------------
 	process (clk)
 	begin

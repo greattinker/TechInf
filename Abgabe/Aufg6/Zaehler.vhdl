@@ -9,7 +9,7 @@ entity Zaehler is
 		clk : in std_logic;
 		zaehler_time : in unsigned(31 downto 0); -- steuert wieviele Takte der Zaehler zaehlen soll, bis er einen peak ausgeben soll. (Zaehler zaehlt mod zaehler_time)
 		zaehler_on : in std_logic; -- Steuersignal, bei 1 laeuft der Zaehler, bei 0 wird der Zaehler gestoppt und zurueckgesetzt
-		peak_out  : out  std_logic -- gibt für einen Takt eine eins aus, sobald der durch "zaehler_time" angelegte Wert erreicht ist
+		peak_out  : out  std_logic -- gibt fuer einen Takt eine eins aus, sobald der durch "zaehler_time" angelegte Wert erreicht ist
 		);
 		
 end Zaehler;
@@ -23,8 +23,8 @@ begin
 
 	--------------------------------------------------------------------------------------
 	-- Liegt "zaehler_on" auf eins, wird das Signal "counter" inkrementiert.
-	-- Wird der durch "zaehler_time" angegebene Maximalwert erreicht wird für einen Takt
-	-- eine 1 an das Signal "peak" ausgegeben und "counter" auf 0 zurückgesetzt
+	-- Wird der durch "zaehler_time" angegebene Maximalwert erreicht wird fuer einen Takt
+	-- eine 1 an das Signal "peak" ausgegeben und "counter" auf 0 zurueckgesetzt
 	-- Liegt "zaehler_on" auf null, wird "counter" auf 0 gesetzt und nicht hochgezaehlt.
 	--------------------------------------------------------------------------------------
 	process(clk)
