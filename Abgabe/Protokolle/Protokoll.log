@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.8)  28 NOV 2013 12:55
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.8)  28 NOV 2013 13:02
 entering extended mode
  %&-line parsing enabled.
 **Protokoll.tex
@@ -947,7 +947,7 @@ Overfull \hbox (79.33344pt too wide) in paragraph at lines 53--54
 Here is how much of TeX's memory you used:
  11044 strings out of 495061
  157591 string characters out of 1182622
- 548384 words of memory out of 3000000
+ 547384 words of memory out of 3000000
  13020 multiletter control sequences out of 15000+50000
  43686 words of font info for 48 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
@@ -966,7 +966,7 @@ exmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/l
 mtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texmf/
 fonts/type1/public/lm/lmtt9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtti10
 .pfb>
-Output written on Protokoll.pdf (25 pages, 654000 bytes).
+Output written on Protokoll.pdf (25 pages, 653256 bytes).
 PDF statistics:
  1321 PDF objects out of 1440 (max. 8388607)
  903 named destinations out of 1000 (max. 500000)
