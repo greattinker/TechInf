@@ -41,9 +41,6 @@
 \subsection{06-Aufgabe Code}
 \label{lst:06-clock}
 \lstinputlisting[caption={VHDL-Code Stoppuhr.vhd}, language=VHDL]{../Aufg6/Stoppuhr.vhd}
-\label{lst:06-decoder}
 \lstinputlisting[caption={VHDL-Code Decoder.vhdl}, language=VHDL]{../Aufg6/Decoder.vhdl}
-\label{lst:06-entpreller}
 \lstinputlisting[caption={VHDL-Code EntprellAutomat.vhdl}, language=VHDL]{../Aufg6/EntprellAutomat.vhdl}
-\label{lst:06-zaehler}
 \lstinputlisting[caption={VHDL-Code Zaehler.vhdl}, language=VHDL]{../Aufg6/Zaehler.vhdl}

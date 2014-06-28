@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.8)  28 NOV 2013 15:18
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.8)  28 NOV 2013 15:34
 entering extended mode
  %&-line parsing enabled.
 **Protokoll.tex
@@ -889,7 +889,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--22
 \openout2 = `06-Aufgabe.aux'.
 
  (./06-Aufgabe.tex
-<resources/06-stopuhr.png, id=167, 1357.07pt x 1021.8175pt>
+<resources/06-stopuhr.png, id=168, 1357.07pt x 1021.8175pt>
 File: resources/06-stopuhr.png Graphic file (type png)
 
 <use resources/06-stopuhr.png> [8
@@ -900,15 +900,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-<resources/06-Entprellautomat.png, id=172, 488.57532pt x 417.81094pt>
+<resources/06-Entprellautomat.png, id=173, 488.57532pt x 417.81094pt>
 File: resources/06-Entprellautomat.png Graphic file (type png)
 
 <use resources/06-Entprellautomat.png>
-<resources/06-Zaehler.png, id=173, 371.13657pt x 314.67563pt>
+<resources/06-Zaehler.png, id=174, 371.13657pt x 314.67563pt>
 File: resources/06-Zaehler.png Graphic file (type png)
 
 <use resources/06-Zaehler.png>
-<resources/06-Stoppuhr.png, id=174, 601.4972pt x 515.67656pt>
+<resources/06-Stoppuhr.png, id=175, 601.4972pt x 515.67656pt>
 File: resources/06-Stoppuhr.png Graphic file (type png)
 
 <use resources/06-Stoppuhr.png> [9 <./resources/06-Entprellautomat.png (PNG cop
@@ -943,32 +943,41 @@ Overfull \hbox (79.33344pt too wide) in paragraph at lines 53--54
 ) [20] (../Aufg6/Stoppuhr.vhd [21] [22]) (../Aufg6/Decoder.vhdl)
 (../Aufg6/EntprellAutomat.vhdl [23] [24]) (../Aufg6/Zaehler.vhdl)) [25]
 (./Protokoll.aux (./01-Aufgabe.aux) (./02-Aufgabe.aux) (./03-Aufgabe.aux)
-(./04-Aufgabe.aux) (./05-Aufgabe.aux) (./06-Aufgabe.aux) (./Anhang.aux)) ) 
+(./04-Aufgabe.aux) (./05-Aufgabe.aux) (./06-Aufgabe.aux) (./Anhang.aux))
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 11043 strings out of 495061
- 157577 string characters out of 1182622
- 547384 words of memory out of 3000000
- 13020 multiletter control sequences out of 15000+50000
+ 11047 strings out of 495061
+ 157644 string characters out of 1182622
+ 547623 words of memory out of 3000000
+ 13025 multiletter control sequences out of 15000+50000
  43686 words of font info for 48 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  43i,12n,45p,301b,1865s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr
-/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dvips/l
-m/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texm
-f/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rmsc
-.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb
-></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type
-1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/t
-exmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/l
-mtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmtt9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtti10
-.pfb>
-Output written on Protokoll.pdf (25 pages, 653687 bytes).
+pdfTeX warning (dest): name{lstnumber.6.76} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lstnumber.5.58} has been referenced but does not ex
+ist, replaced by a fixed one
+
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share
+/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-rmsc.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/
+fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi1
+0.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/pub
+lic/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/sh
+are/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public
+/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texmf/fonts/type1/public/lm/lm
+tti10.pfb>
+Output written on Protokoll.pdf (25 pages, 653708 bytes).
 PDF statistics:
  1320 PDF objects out of 1440 (max. 8388607)
- 902 named destinations out of 1000 (max. 500000)
+ 901 named destinations out of 1000 (max. 500000)
  231 words of extra memory for PDF output out of 10000 (max. 10000000)
 

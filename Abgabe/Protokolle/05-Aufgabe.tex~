@@ -20,7 +20,7 @@
 		\hline
 	\end{tabular}
 	\item[b)] Für das Schieberegister ist der Zählerzustand ein Enable-Signal
-	\item[c)]  (\ref{lst:05-hallo}~Hallo.vhdl-Code) 
+	\item[c)]
 	\end{description}
 
 	
